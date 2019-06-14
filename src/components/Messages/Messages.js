@@ -312,7 +312,7 @@ class Messages extends React.Component {
                             ? this.displayMessages(searchResults) 
                             : this.displayMessages(messages)}
                         {this.displayTypingUsers(typingUsers)}
-                        {/* <Segment ref={node => (this.messagesEnd = node)} /> */}
+                        <div ref={node => (this.messagesEnd = node)} />
                     </Comment.Group>
                 </Segment>
 
