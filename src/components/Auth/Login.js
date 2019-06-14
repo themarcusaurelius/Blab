@@ -103,7 +103,7 @@ class Login extends Component {
                             {this.displayErrors(errors)}
                         </Message>
                     )}
-                    <Message raised>
+                    <Message>
                         Don't have an account? <Link to='/register'>Register</Link>
                     </Message>
                 </Grid.Column> 
