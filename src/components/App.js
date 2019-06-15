@@ -34,7 +34,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const FullWidthTabs = ({ currentUser, currentChannel, isPrivateChannel, userPosts, primaryColor, secondaryColor }) => {
+const FullWidthTabs = ({ currentUser, currentChannel, isPrivateChannel, userPosts }) => {
   const classes = useStyles();
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
@@ -70,7 +70,8 @@ const FullWidthTabs = ({ currentUser, currentChannel, isPrivateChannel, userPost
           onChangeIndex={handleChangeIndex}
         >
           <TabContainer dir={theme.direction}>
-            <SidePanel 
+            <SidePanel
+              onChangeIndex={handleChangeIndex}
               key={currentUser && currentUser.id}
               currentUser={currentUser}
               primaryColor="#673ab7"

@@ -9,6 +9,7 @@ class Channels extends React.Component {
   state = {
     activeChannel: "",
     user: this.props.currentUser,
+    switchChannel: this.props.handleChangeIndex,
     channel: null,
     channels: [],
     channelName: "",
@@ -135,14 +136,14 @@ class Channels extends React.Component {
     this.setState({ [event.target.name]: event.target.value });
   };
 
-  changeChannel = channel => {
+  changeChannel = (channel, switchChannel) => {
     this.setActiveChannel(channel);
     this.state.typingRef
       .child(this.state.channel.id)
       .child(this.state.user.uid)
       .remove();
     this.clearNotifications();
-    this.props.setCurrentChannel(channel);
+    this.props.setCurrentChannel(channel, switchChannel);
     this.props.setPrivateChannel(false);
     this.setState({ channel });
   };
