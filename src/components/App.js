@@ -54,7 +54,6 @@ const FullWidthTabs = ({ currentUser, currentChannel, isPrivateChannel, userPost
           value={value}
           onChange={handleChange}
           indicatorColor="secondary"
-          textColor=""
           variant="fullWidth"
         >
           <Tab label="Console" />

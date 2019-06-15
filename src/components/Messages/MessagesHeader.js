@@ -42,7 +42,7 @@ class MessagesHeader extends React.Component {
                             icon="search"
                             name="searchTerm"
                             placeholder="Search"
-                            fluid="true"
+                            fluid
                             size="mini"
                             
                         />

@@ -230,11 +230,10 @@ class MessageForm extends React.Component {
                     )}
                     <div className="btn">
                         <Button 
-                            color="7c4dff"
-                            disabled={uploadState === "uploading"}
-                            onClick={this.openModal}
-                            icon="cloud upload"
-                            large
+                          disabled={uploadState === "uploading"}
+                          onClick={this.openModal}
+                          icon="cloud upload"
+                          large="true"
                         />
                     </div>
                     <Input 

@@ -103,7 +103,7 @@ class DirectMessages extends Component {
 
     render() {
         const { users, activeChannel } = this.state
-           
+
         return (
             <Menu.Menu className="menu">
                 <Menu.Item>
@@ -124,12 +124,17 @@ class DirectMessages extends Component {
                             color={this.isUserOnline(user) ? 'green' : 'red'}
                         />
                         @ {user.name}
+
+                        {console.log(user.name)}
+                        
                     </Menu.Item>
                 ))}
             </Menu.Menu>
         );
     }
 };
+
+
 
 export default connect(
     null, 
