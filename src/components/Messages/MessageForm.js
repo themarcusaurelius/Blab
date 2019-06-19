@@ -8,6 +8,8 @@ import "emoji-mart/css/emoji-mart.css";
 import FileModal from "./FileModal";
 import ProgressBar from "./ProgressBar";
 
+import Paper from '@material-ui/core/Paper';
+
 class MessageForm extends React.Component {
   state = {
     storageRef: firebase.storage().ref(),
@@ -216,7 +218,7 @@ class MessageForm extends React.Component {
         } = this.state
 
         return (
-            <Segment className="message__form" raised>
+            <Segment className="message__form" raised elevation={15}>
                 <div className="message__input">
                     {emojiPicker && (
                         <Picker

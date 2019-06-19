@@ -40,7 +40,7 @@ class MetaPanel extends React.Component {
         if (privateChannel) return null;
 
         return (
-            <Paper elevation={24}>
+            <Paper elevation={24} className="meta">
                 <Header as="h3" attached="top">
                     About # {channel && channel.name}
                 </Header>

@@ -1,7 +1,6 @@
 import React from 'react'
 import { Header, Input, Icon, Segment } from 'semantic-ui-react';
 
-
 class MessagesHeader extends React.Component {
     render() {
         const { 
@@ -15,8 +14,8 @@ class MessagesHeader extends React.Component {
         } = this.props;
 
         return (
-            <React.Fragment>
-                <Segment clearing raised>
+            <div >
+                <Segment clearing raised className="header" style={{ maxWidth: 600 }}>
                      {/* Channel Title */}
                     <Header fluid="true" as="h4" floated="left" style={{ marginBottom: 0}}>
                         <span>
@@ -35,20 +34,19 @@ class MessagesHeader extends React.Component {
                     </Header>
 
                     {/* Channel Search Input */}
-                    <Header floated="right">
+                    <Header floated="right" className="search">
                         <Input
                             loading={searchLoading}
                             onChange={handleSearchChange}
                             icon="search"
                             name="searchTerm"
                             placeholder="Search"
-                            fluid
                             size="mini"
-                            
+                            fluid
                         />
                     </Header> 
                 </Segment>   
-            </React.Fragment>
+            </div>
         );
     }
 };

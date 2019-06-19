@@ -294,7 +294,7 @@ class Messages extends React.Component {
         } = this.state;
 
         return (
-            <React.Fragment>
+            <div className="chat__page">
                 <MessagesHeader 
                     channelName={this.displayChannelName(channel)}
                     numUniqueUsers={numUniqueUsers}
@@ -305,7 +305,7 @@ class Messages extends React.Component {
                     isChannelStarred={isChannelStarred}
                 />
 
-                <Segment raised>
+                <Segment raised className="messages__container" style={{ marginBottom: 0 }}>
                     <Comment.Group className="messages">
                         {this.displayMessageSkeleton(messagesLoading)}
                         {searchTerm 
@@ -324,7 +324,7 @@ class Messages extends React.Component {
                     isPrivateChannel={privateChannel}
                     getMessagesRef={this.getMessagesRef}
                 />
-            </React.Fragment>
+            </div>
         );
     }
 }

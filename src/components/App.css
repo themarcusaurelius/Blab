@@ -6,7 +6,7 @@
 }
 
 .main {
-  margin-top: 12.5%
+  margin-top: 3%
 }
 
 /* SidePanel.js */
@@ -14,31 +14,56 @@
   padding-bottom: 2em;
 }
 
+/* SidePanel.js */
+.meta {
+  max-width: 500px;
+}
+
 /* Messages.js */
+.chat__page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  padding-left: 10%
+}
+
+.messages__container {
+  max-width: 600px;
+}
+
 .messages {
   height: 68vh;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
 
-.emoijpicker {
-  position: absolute;
-}
 
 /* MessageForm.js */
+.message__form {
+  max-width: 600px;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
 .message__input {
   margin-top: 10px;
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: center;
 }
 
 .btn {
- margin-top: 1px;
- margin-left: 1px
+  margin-bottom: 10px;
+  margin-left: 1px
 }
 
 /* Message.js */
+
+
 .message__self {
   border-left: 2px solid rgba(119, 0, 255, 0.589);
   padding-left: 8px;
@@ -50,7 +75,7 @@
 
 /* ProgressBar.js */
 .progress__bar {
-  margin: 0.3em 0 0 0 !important;
+  margin: 0.3em 0 0 1 !important;
 }
 
 /* ColorPanel.js */
@@ -189,4 +214,26 @@
   bottom: 5px;
   left: 40px;
   right: 20px;
+}
+
+/* Iphone X, 6, 7, 8 */
+@media only screen and (max-width: 600px) {
+  .chat__page {
+    margin-left: 0%
+  }
+
+  .main {
+    margin-top: 12.5%
+  }
+}
+
+/* WideScreen */
+@media only screen and (min-width: 1900px) {
+  .chat__page {
+    margin-left: 0%
+  }
+
+  .main {
+    margin-top: 2%
+  }
 }

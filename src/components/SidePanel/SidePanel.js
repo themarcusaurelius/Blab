@@ -20,7 +20,7 @@ class SidePanel extends React.Component {
             >
                 <UserPanel currentUser={currentUser} />
                 <Starred currentUser={currentUser} />
-                <Channels currentUser={currentUser} onChangeIndex={handleChangeIndex} />
+                <Channels currentUser={currentUser}  />
                 <DirectMessages currentUser={currentUser} onChangeIndex={handleChangeIndex} />
             </Menu>
         );

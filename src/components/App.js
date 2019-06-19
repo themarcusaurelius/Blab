@@ -61,40 +61,39 @@ const FullWidthTabs = ({ currentUser, currentChannel, isPrivateChannel, userPost
           <Tab label="About" />
         </Tabs>
       </AppBar>
-
-      
-        <SwipeableViews 
-          className="main"
-          axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-          index={value}
-          onChangeIndex={handleChangeIndex}
-        >
-          <TabContainer dir={theme.direction}>
-            <SidePanel
-              onChangeIndex={handleChangeIndex}
-              key={currentUser && currentUser.id}
-              currentUser={currentUser}
-              primaryColor="#673ab7"
-            />  
-          </TabContainer>
-          <TabContainer dir={theme.direction}>
-            <Messages 
-              key={currentChannel && currentChannel.id}
-              currentChannel={currentChannel}
-              currentUser={currentUser}
-              isPrivateChannel={isPrivateChannel}
-            />
-          </TabContainer>
-          <TabContainer dir={theme.direction}>
-            <MetaPanel 
-              key={currentChannel && currentChannel.id}
-              userPosts={userPosts}
-              isPrivateChannel={isPrivateChannel}
-              currentChannel={currentChannel}
-            />
-          </TabContainer>
-        </SwipeableViews>
-      </div>
+      <SwipeableViews 
+        className="main"
+        axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+        index={value}
+        onChangeIndex={handleChangeIndex}
+      >
+        <TabContainer dir={theme.direction}>
+          <SidePanel
+            onChangeIndex={handleChangeIndex}
+            key={currentUser && currentUser.id}
+            currentUser={currentUser}
+            primaryColor="#673ab7"
+          />  
+        </TabContainer>
+        <TabContainer dir={theme.direction}>
+          <Messages 
+            key={currentChannel && currentChannel.id}
+            currentChannel={currentChannel}
+            currentUser={currentUser}
+            isPrivateChannel={isPrivateChannel}
+          />
+        </TabContainer>
+        <TabContainer dir={theme.direction}>
+          <MetaPanel
+            
+            key={currentChannel && currentChannel.id}
+            userPosts={userPosts}
+            isPrivateChannel={isPrivateChannel}
+            currentChannel={currentChannel}
+          />
+        </TabContainer>
+      </SwipeableViews>
+    </div>
   );
 }
 
