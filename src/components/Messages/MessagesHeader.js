@@ -15,7 +15,7 @@ class MessagesHeader extends React.Component {
 
         return (
             <div >
-                <Segment clearing raised className="header" style={{ maxWidth: 600 }}>
+                <Segment clearing raised className="header">
                      {/* Channel Title */}
                     <Header fluid="true" as="h4" floated="left" style={{ marginBottom: 0}}>
                         <span>

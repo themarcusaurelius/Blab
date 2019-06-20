@@ -16,36 +16,17 @@
 
 /* SidePanel.js */
 .meta {
-  max-width: 500px;
-}
-
-/* Messages.js */
-.chat__page {
-  
-}
-
-.header {
-  padding-left: 10%
-}
-
-.messages__container {
   max-width: 600px;
 }
 
+/* Messages.js */
 .messages {
   height: 68vh;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
 
-
 /* MessageForm.js */
-.message__form {
-  max-width: 600px;
-  padding-left: 2%;
-  padding-right: 2%;
-}
-
 .message__input {
   margin-top: 10px;
   display: flex;
@@ -60,8 +41,6 @@
 }
 
 /* Message.js */
-
-
 .message__self {
   border-left: 2px solid rgba(119, 0, 255, 0.589);
   padding-left: 8px;
@@ -74,26 +53,6 @@
 /* ProgressBar.js */
 .progress__bar {
   margin: 0.3em 0 0 1 !important;
-}
-
-/* ColorPanel.js */
-.color__container {
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  width: 35px;
-  border-radius: 3px;
-}
-
-.color__square {
-  width: 35px;
-  height: 35px;
-}
-
-.color__overlay {
-  width: 85px;
-  height: 35px;
-  transform: rotate(225deg);
 }
 
 /* Typing.js */
@@ -227,11 +186,16 @@
 
 /* WideScreen */
 @media only screen and (min-width: 1900px) {
-  .chat__page {
-    margin-left: 0%
-  }
-
+  
   .main {
     margin-top: 2%
+  }
+}
+
+/* Phone Widescreen */
+/* WideScreen */
+@media only screen and (min-width: 700px) {
+  .main {
+    margin-top: 5%
   }
 }
